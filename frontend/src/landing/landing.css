@@ -1,0 +1,325 @@
+/***** Always True *****/
+@media only screen {
+    /*** General Purpose Display Styles ***/
+    .none {display: none;}
+    .flex {display: flex;}
+    .column {flex-direction: column;}
+    .width-100 {width: 100%;}
+    .absolute {position: absolute !important;}
+    .hidden {visibility: hidden;}
+    .row-reverse {flex-direction: row-reverse;}
+    .align-self-end {align-self: flex-end;}
+    .column-reverse {flex-direction: column-reverse;}
+    .align-center {align-items: center;}
+    .justify-center {justify-content: center;}
+    .align-self-center {align-self: center;}
+    .justify-around {justify-content: space-around;}
+    .height-42vw {height: 42vw;}
+    .scroll {overflow: scroll;}
+    .no-scrollbar::-webkit-scrollbar {display: none;}
+    .no-scrollbar {-ms-overflow-style: none;scrollbar-width: none;}
+    .pointer:hover {cursor: pointer;}
+    .width-60 {width: 60%;}
+    .text-center {text-align: center;}
+    .height-75vw {height: 75vw;}
+    .height-100 {height: 100%;}
+    .padding-0 {padding: 0 !important;}
+
+    /*** Margins ***/
+    .margin-bottom-20px {margin-bottom: 20px !important;}
+    .margin-top-20px {margin-top: 20px !important;}
+    .margin-0 {margin: 0;}
+
+    /*** Colors ***/
+    .black {color: #000;}
+    .white {color: #fff;}
+    .circle {border-radius: 50%;}
+
+    /*** Opacities ***/
+    .opacity-90 {opacity: 90%;}
+    .opacity-90:hover {opacity: 10%;}
+
+    /*** Fonts ***/
+    .font-65px {font-size: 65px;}
+    .font-32px {font-size: 32px;}
+    .font-26px {font-size: 26px;}
+    .font-22px {font-size: 22px;}
+    .font-3vw {font-size: 3vw !important;}
+    .font-3-5vw {font-size: 3.5vw !important;}
+    .font-2vw {font-size: 2vw !important;}
+    .font-2-5vw {font-size: 2.5vw !important;}
+
+    /*** Text Styles ***/
+    .heavy {font-weight: 900;}
+    .extrabold {font-weight: 700;}
+    .bold {font-weight: 500;}
+    .regular {font-weight: 400;}
+
+    /*** Background Color Gradients ***/
+    .red    {background: linear-gradient(225deg, #F78888 0%, #DA6767 88.84%);}
+    .blue   {background: linear-gradient(225deg, #91FFFF 0%, #87E9FF 88.84%);}
+    .green  {background: linear-gradient(180deg, #39CBB9 0%, #5BFE9E 100%);}
+    .purple {background: linear-gradient(269.15deg, #C183F2 4.11%, #E5B2FF 96.97%);}
+    .orange {background: linear-gradient(225deg, #D69334 0%, #FD8F3C 88.84%);}
+    .yellow {background: linear-gradient(225deg, #FBFF3C 0%, #DCD531 88.84%)}
+    .gray {background-color: #EFEFEF;}
+    .simba {background: url("../media/images/simba1.png"); background-size: cover;}
+    .flash {background: url("../media/images/flash1.png"); background-size: cover;}
+
+    /*** Shadows ***/
+    .box-shadow {box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+    .box-shadow-75 {box-shadow: 0px 4px 75px 20px rgba(0, 0, 0, 0.2);}
+    .box-shadow-40 {box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.04), inset 0px 0px 72px 10px rgba(0, 0, 0, 0.04);}
+
+    /*** Rotations ***/
+    .rotate-45 {transform: rotate(45deg);}
+    
+    /*** Squares ***/
+    .sqr-300px {width: 300px; height: 300px;}
+    .sqr-250px {width: 250px; height: 250px;}
+    .sqr-230px {width: 230px; height: 230px;}
+
+    /*** Element Styles ***/
+
+    /*** Class Styles ***/
+    .profile-image {
+        background: url("../media/images/profilepic.jpg");
+        background-size: cover;
+        filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
+    }
+
+    .profile {
+        min-height: 350px;
+    }
+
+    .logo-mit {
+        height: 40vw;
+        background: url("../media/svgs/mit.svg");
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+    }
+
+    .typing {
+        overflow: hidden;
+        animation: 
+            typing 3.5s,
+            blink-caret .75s step-end infinite;
+    }
+
+    .slideshow > img {
+        white-space: nowrap;
+        animation: slide infinite 10s alternate;
+    }
+
+    .cycle-start1-animation {animation: cycle-start1 infinite 25s alternate-reverse;}
+    .cycle-start2-animation {animation: cycle-start2 infinite 25s alternate-reverse;}
+    .cycle-start3-animation {animation: cycle-start3 infinite 25s alternate-reverse;}
+    .cycle-start4-animation {animation: cycle-start4 infinite 25s alternate-reverse;}
+    .cycle-start5-animation {animation: cycle-start5 infinite 25s alternate-reverse;}
+
+    .project-box {
+        width: 20%;
+        height: 30vw;
+        position: absolute !important;
+    }
+
+    .image {
+        height: 23vw;
+    }
+
+    .enlarge:hover {
+        z-index: 1;
+        margin-top: 20px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .appear-animation {
+        animation: appear 20s;
+    }
+
+    /*** Animations ***/
+    @keyframes slide {
+        0% {
+          margin-left: 0px;
+        }
+        50% {
+          margin-left: -100px;
+        }
+        100% {
+          margin-left: -200px;
+        }
+      }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #000; }
+      }
+
+      @keyframes appear {
+          0% {opacity: 0;}
+          100% {opacity: 100%;}
+      }
+    
+      @keyframes cycle-start3 {
+          0% {
+            margin: 0;
+            margin-top: 35vw;
+            margin-left: 20vw;
+          }
+          20% {
+            margin: 0;
+            margin-top: 10vw;
+            margin-left: 50vw;
+          }
+          40% {margin: 0;}
+          60% {
+            margin: 0;
+            margin-top: 15vw;
+            margin-right: 50vw;
+          }
+          80% {
+            margin: 0;
+            margin-top: 40vw;
+            margin-right: 25vw;
+          }
+          100% {
+            margin: 0;
+            margin-top: 35vw;
+            margin-left: 20vw;
+          }
+      }
+
+      @keyframes cycle-start2 {
+        0% {
+          margin: 0;
+          margin-top: 10vw;
+          margin-left: 50vw;
+        }
+        20% {margin: 0;}
+        40% {
+          margin: 0;
+          margin-top: 15vw;
+          margin-right: 50vw;
+        }
+        60% {
+          margin: 0;
+          margin-top: 40vw;
+          margin-right: 25vw;
+        }
+        80% {
+          margin: 0;
+          margin-top: 35vw;
+          margin-left: 20vw;
+        }
+        100% {
+            margin: 0;
+            margin-top: 10vw;
+            margin-left: 50vw;
+          }
+      }
+
+      @keyframes cycle-start1 {
+        0% {margin: 0;}
+        20% {
+          margin: 0;
+          margin-top: 15vw;
+          margin-right: 50vw;
+        }
+        40% {
+          margin: 0;
+          margin-top: 40vw;
+          margin-right: 25vw;
+        }
+        60% {
+          margin: 0;
+          margin-top: 35vw;
+          margin-left: 20vw;
+        }
+        80% {
+            margin: 0;
+            margin-top: 10vw;
+            margin-left: 50vw;
+          }
+        100% {margin: 0;}
+      }
+
+      @keyframes cycle-start5 {
+        0% {
+          margin: 0;
+          margin-top: 15vw;
+          margin-right: 50vw;
+        }
+        20% {
+          margin: 0;
+          margin-top: 40vw;
+          margin-right: 25vw;
+        }
+        40% {
+          margin: 0;
+          margin-top: 35vw;
+          margin-left: 20vw;
+        }
+        60% {
+            margin: 0;
+            margin-top: 10vw;
+            margin-left: 50vw;
+          }
+        80% {margin: 0;}
+        100% {
+            margin: 0;
+            margin-top: 15vw;
+            margin-right: 50vw;
+          }
+      }
+
+      @keyframes cycle-start4 {
+        0% {
+          margin: 0;
+          margin-top: 40vw;
+          margin-right: 25vw;
+        }
+        20% {
+          margin: 0;
+          margin-top: 35vw;
+          margin-left: 20vw;
+        }
+        40% {
+            margin: 0;
+            margin-top: 10vw;
+            margin-left: 50vw;
+          }
+        60% {margin: 0;}
+        80% {
+            margin: 0;
+            margin-top: 15vw;
+            margin-right: 50vw;
+          }
+        100% {
+            margin: 0;
+            margin-top: 40vw;
+            margin-right: 25vw;
+          }
+      }
+}
+
+/***** > 600px *****/
+@media only screen and (min-width: 775px) {
+
+}
+
+/***** <= 600px *****/
+@media only screen and (max-width: 775px) {
+    .profile {
+        flex-direction: column-reverse;
+    }
+    .profile-text {
+        align-items: center;
+    }
+}
