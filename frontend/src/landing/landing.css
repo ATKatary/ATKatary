@@ -4,36 +4,52 @@
     .none {display: none;}
     .flex {display: flex;}
     .column {flex-direction: column;}
-    .width-100 {width: 100%;}
     .absolute {position: absolute !important;}
     .hidden {visibility: hidden;}
     .row-reverse {flex-direction: row-reverse;}
-    .align-self-end {align-self: flex-end;}
     .column-reverse {flex-direction: column-reverse;}
     .align-center {align-items: center;}
     .justify-center {justify-content: center;}
     .align-self-center {align-self: center;}
+    .align-self-start {align-self: flex-start;}
+    .align-self-end {align-self: flex-end;}
     .justify-around {justify-content: space-around;}
-    .height-42vw {height: 42vw;}
     .scroll {overflow: scroll;}
     .no-scrollbar::-webkit-scrollbar {display: none;}
     .no-scrollbar {-ms-overflow-style: none;scrollbar-width: none;}
     .pointer:hover {cursor: pointer;}
-    .width-60 {width: 60%;}
     .text-center {text-align: center;}
-    .height-75vw {height: 75vw;}
-    .height-100 {height: 100%;}
+    .justify-between {justify-content: space-between;}
     .padding-0 {padding: 0 !important;}
+
+    /*** Widths ***/
+    .width-60 {width: 60%;}
+    .width-80 {width: 80%;}
+    .width-100 {width: 100%;}
+
+    /*** Heights ***/
+    .height-75vw {height: 75vw;}
+    .height-60vw {height: 60vw;}
+    .height-100 {height: 100%;}
+    .height-20vw {height: 20vw;}
+    .height-42vw {height: 42vw;}
+    
+    /*** Shapes ***/
+    .circle {border-radius: 50%;}
+    
+    /*** Paddings ***/
+    .padding-30px {padding: 30px;}
 
     /*** Margins ***/
     .margin-bottom-20px {margin-bottom: 20px !important;}
     .margin-top-20px {margin-top: 20px !important;}
     .margin-0 {margin: 0;}
+    .margin-30px {margin: 30px;}
+    .margin-40px {margin: 40px;}
 
     /*** Colors ***/
     .black {color: #000;}
     .white {color: #fff;}
-    .circle {border-radius: 50%;}
 
     /*** Opacities ***/
     .opacity-90 {opacity: 90%;}
@@ -65,6 +81,8 @@
     .gray {background-color: #EFEFEF;}
     .simba {background: url("../media/images/simba1.png"); background-size: cover;}
     .flash {background: url("../media/images/flash1.png"); background-size: cover;}
+    .background-1 {background: url("../media/images/background1.webp"); background-size: cover;} 
+    .background-2 {background: url("../media/images/background2.jpg"); background-size: cover;}
 
     /*** Shadows ***/
     .box-shadow {box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
@@ -83,73 +101,44 @@
 
     /*** Class Styles ***/
     .profile-image {
-        background: url("../media/images/profilepic.jpg");
-        background-size: cover;
-        filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
-    }
-
-    .profile {
-        min-height: 350px;
+      background: url("../media/images/profilepic.jpg");
+      background-size: cover;
+      filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
+      margin-top: -6vw;
     }
 
     .logo-mit {
-        height: 40vw;
-        background: url("../media/svgs/mit.svg");
-        background-position: center;
-        background-size: 60%;
-        background-repeat: no-repeat;
+      height: 40vw;
+      background: url("../media/svgs/mit.svg");
+      background-position: center;
+      background-size: 60%;
+      background-repeat: no-repeat;
     }
 
     .typing {
-        overflow: hidden;
-        animation: 
-            typing 3.5s,
-            blink-caret .75s step-end infinite;
+      overflow: hidden;
+      animation: 
+          typing 3.5s,
+          blink-caret .75s step-end infinite;
     }
 
-    .slideshow > img {
-        white-space: nowrap;
-        animation: slide infinite 10s alternate;
-    }
-
+    .cycle-start0-animation {animation: cycle-start0 infinite 25s alternate-reverse;}
     .cycle-start1-animation {animation: cycle-start1 infinite 25s alternate-reverse;}
     .cycle-start2-animation {animation: cycle-start2 infinite 25s alternate-reverse;}
     .cycle-start3-animation {animation: cycle-start3 infinite 25s alternate-reverse;}
     .cycle-start4-animation {animation: cycle-start4 infinite 25s alternate-reverse;}
-    .cycle-start5-animation {animation: cycle-start5 infinite 25s alternate-reverse;}
 
     .project-box {
-        width: 20%;
-        height: 30vw;
-        position: absolute !important;
-    }
-
-    .image {
-        height: 23vw;
-    }
-
-    .enlarge:hover {
-        z-index: 1;
-        margin-top: 20px;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+      border: solid 5px #87E9FF;
     }
 
     .appear-animation {
-        animation: appear 20s;
+      animation: appear 20s;
     }
 
+    .profile-text {margin-bottom: 10vw;}
+
     /*** Animations ***/
-    @keyframes slide {
-        0% {
-          margin-left: 0px;
-        }
-        50% {
-          margin-left: -100px;
-        }
-        100% {
-          margin-left: -200px;
-        }
-      }
 
     @keyframes typing {
         from { width: 0 }
@@ -167,7 +156,7 @@
           100% {opacity: 100%;}
       }
     
-      @keyframes cycle-start3 {
+      @keyframes cycle-start2 {
           0% {
             margin: 0;
             margin-top: 35vw;
@@ -196,7 +185,7 @@
           }
       }
 
-      @keyframes cycle-start2 {
+      @keyframes cycle-start1 {
         0% {
           margin: 0;
           margin-top: 10vw;
@@ -225,7 +214,7 @@
           }
       }
 
-      @keyframes cycle-start1 {
+      @keyframes cycle-start0 {
         0% {margin: 0;}
         20% {
           margin: 0;
@@ -250,7 +239,7 @@
         100% {margin: 0;}
       }
 
-      @keyframes cycle-start5 {
+      @keyframes cycle-start4 {
         0% {
           margin: 0;
           margin-top: 15vw;
@@ -279,7 +268,7 @@
           }
       }
 
-      @keyframes cycle-start4 {
+      @keyframes cycle-start3 {
         0% {
           margin: 0;
           margin-top: 40vw;
@@ -309,17 +298,20 @@
       }
 }
 
-/***** > 600px *****/
-@media only screen and (min-width: 775px) {
-
+/***** > 700px *****/
+@media only screen and (min-width: 700px) {
+  .profile-text {margin-left: 10vw;}
+  .profile-image {width: 24vw; height: 24vw;}
+  .project-box {width: 24vw; height: 18vw;}
+  .project-box {margin-right: 30px;}
+  .justify-end-center {justify-content: flex-end;}
 }
 
-/***** <= 600px *****/
-@media only screen and (max-width: 775px) {
-    .profile {
-        flex-direction: column-reverse;
-    }
-    .profile-text {
-        align-items: center;
-    }
+/***** <= 700px *****/
+@media only screen and (max-width: 700px) {
+  .profile {flex-direction: column-reverse;}
+  .profile-image {width: 30vw; height: 30vw;}
+  .profile-text {align-items: center;}
+  .justify-end-center {justify-content: center;}
+  .project-box {width: 30vw; height: 24vw;}
 }

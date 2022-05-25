@@ -1,81 +1,61 @@
 import "./landing.css";
 import React from "react";
+import {} from "@mui/material";
+import {Card} from '../gallery/utils.ts';
 import NavBar from  "../navbar/navbar.js";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Stack from '@mui/material/Stack';
-import img2 from '../media/images/pic2.png';
-import img3 from '../media/images/pic3.png';
-import img4 from '../media/images/pic4.png';
-import img16 from '../media/images/pic16.png';
-import img15 from '../media/images/pic15.png';
-import img7 from '../media/images/pic7.png';
-import MapSvg from '../media/svgs/mapsvg';
+import {ProjectSlideShow, Shuffle, FallingBlocks} from "../gallery/gallery";
+
+/*** GLobal Constants ***/
+const project = (title, description, color, link, img=undefined) => {return {'title': title, 'description': description, 'color': color, 'link': link, 'img': img}}
 
 function Landing() {
-  const drawings = [img2, img16, img3, img4, img15, img7];
+  const images = require.context('../media/images', true);
+  const drawings = [];
+  const projects = [project("Project 1", "Category", "green", "/"),
+                    project("Project 2", "Category", "purple", "/", images(`./projects/project1.png`)),
+                    project("Project 3", "Category", "orange", "/", images(`./projects/project2.png`)),
+                    project("Project 4", "Category", "blue", "/", images(`./projects/project3.png`)),
+                    project("Project 5", "Category", "red", "/")];
+const [w, h] = [120, 40]
+const skills = [new Card(w, h, "javascript"), new Card(w, h, "html"),
+                  new Card(w, h, "python"), new Card(w, h, "cv"),
+                  new Card(w, h, "java"), new Card(w, h, "typescript"),
+                  new Card(w, h, "reactjs"), new Card(w, h, "django"),
+                  new Card(w, h, "pytorch"), new Card(w, h, "tensorflow"),
+                  new Card(w, h, "scikit"), new Card(w, h, "nltk"),]
+
+  for (let imgNum = 0; imgNum < 6; imgNum++) drawings.push(images(`./drawings/pic${imgNum}.png`));
+
   return (
     <>
     <div id="root" className=" width-100 flex column align-center">
-        <NavBar />
-        <div id="intro" className="appear-animation flex justify-around align-center width-100 profile">
-          <div className="black profile-text flex column">
-            <p className="font-65px heavy margin-0">HELLO</p>
-            <p className="font-32px extrabold margin-0">I am Ahmed Katary</p>
-            <p className="font-26px bold margin-0">Computer Scientist | Artist</p>
-            <p className="font-22px regular margin-0">Welcome to my slice of the web!</p>
-          </div>
-          <div className="circle sqr-300px flex align-center justify-center box-shadow-40">
-            <div className="circle sqr-250px  flex align-center gray justify-center box-shadow-75">
-              <div className="circle profile-image sqr-230px"></div>
-            </div>
+        {/** Intro **/}
+        <div id="intro" className="appear-animation column flex justify-between align-self-start width-100 height-60vw blue">
+          <NavBar color="#fff"/>
+          <div className="white profile-text flex column">
+            <p className="heavy margin-0" style={{fontSize: "12vw"}}>HELLO</p>
+            <p className="extrabold margin-0" style={{fontSize: "7vw"}}>I am Ahmed Katary</p>
+            <p className="bold margin-0" style={{fontSize: "4vw"}}>Computer Scientist | Artist</p>
+            <p className="regular margin-0" style={{fontSize: "3vw"}}>Welcome to my slice of the web!</p>
           </div>
         </div>
-        <MapSvg />
-        
-        {/** About **/}
-        {/* <div className="flex column align-center width-100 appear-animation">
-          <p class="font-3-5vw extrabold black margin-0 margin-top-20px">About</p>
-          <p class="logo-mit font-3vw width-60 black flex align-center text-center margin-0 margin-bottom-20px">I am a computer science and enginering student at Massachusets Institute of Techonology (MIT) interested in machine learning, user interfaces, and design. </p>
-        </div> */}
-
-        {/** Projects **/}
-        <div className="flex column align-center width-100 appear-animation">
-          <p class="font-3-5vw black extrabold">Projects</p>
-          <div className="width-100 height-75vw margin-20px flex justify-center">
-            <Button className="project-box box-shadow cycle-start1-animation flash padding-0">
-              <Button className="green opacity-90 width-100 height-100 pointer flex column">
-                <Typography className="white font-2-5vw">Flash Light</Typography>
-                <Typography className="white font-2vw">Mechanical</Typography>
-              </Button>
-            </Button>
-            <Button className="project-box box-shadow cycle-start5-animation simba padding-0">
-              <Button className="purple opacity-90 width-100 height-100 pointer flex column">
-                <Typography className="white font-2-5vw">Simba</Typography>
-                <Typography className="white font-2vw">Mechanical</Typography>
-              </Button>
-            </Button>
-            <Button className="project-box box-shadow cycle-start2-animation padding-0">
-              <Button className="orange opacity-90 width-100 height-100 pointer flex column">
-                <Typography className="white font-2-5vw">Online IDE</Typography>
-                <Typography className="white font-2vw">Software</Typography>
-              </Button>
-            </Button>
-            <Button className="project-box box-shadow cycle-start3-animation red pointer"></Button>
-            <Button className="project-box box-shadow cycle-start4-animation blue pointer"></Button>
+        <div className="width-100 flex justify-end-center appear-animation">
+          <div className="margin-right-40px box-shadow project-box">
+              <div className="square-300 profile-image"></div>
           </div>
         </div>
 
         {/** Art **/}
-        <p className="font-3-5vw extrabold black margin-10px">Art Gallery</p>
-        <Stack direction="horizontal" className="width-100 slideshow scroll appear-animation">
-          {drawings.length > 0 ?
-            drawings.map((item, index) => {
-                return (<img className="box-shadow margin-5px enlarge image" src={item} alt=""/>);
-                }) :  <></>}
-        </Stack>
-        {/** Projects/Research **/}
-        
+        <p className="font-3-5vw regular black margin-30px align-self-start" id="art">Art Gallery</p>
+        <Shuffle images={drawings}/>
+
+        {/** Research **/}
+        <p className="font-3-5vw regular black margin-30px align-self-end" id="research">Research</p>
+
+        {/** Projects **/}
+        <p className="font-3-5vw regular black margin-30px align-self-start" id="projects">Projects</p>
+        <ProjectSlideShow projects={projects}/>
+        <FallingBlocks cards={skills}/>
 
         {/** Papers / Publications **/}
         
