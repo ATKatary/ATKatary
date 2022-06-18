@@ -133,7 +133,7 @@
     }
 
     .appear-animation {
-      animation: appear 20s;
+      animation: appear 5s;
     }
 
     .profile-text {margin-bottom: 10vw;}
