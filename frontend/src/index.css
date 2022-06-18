@@ -2,7 +2,7 @@
 @media only screen {
   html {
     color: #fff;
-    background: #fff;
+    background: #333;
   }
 
   body {
@@ -24,6 +24,7 @@
     width: -webkit-fill-available;
     -ms-overflow-style: none; 
     scrollbar-width: none;
+    height: 100vh;
   }
 
   ::-webkit-scrollbar {

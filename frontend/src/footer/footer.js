@@ -4,8 +4,9 @@ import Typography from '@mui/material/Typography';
 function Footer() {
   return (
     <>
-      <footer>
-        <Typography variant="subtitle" id="copyrightNotice" component="div" gutterBottom>2022 © All Rights Reserved</Typography>
+      <footer className="flex column align-center">
+        <Typography sx={{fontSize: "1vw", fontFamily: "'Annie Use Your Telescope'", color: "#fff"}} variant="subtitle" id="copyrightNotice" component="div" gutterBottom>2022 © All Rights Reserved</Typography>
+        <Typography sx={{fontSize: "1vw", fontFamily: "'Annie Use Your Telescope'", color: "#fff"}} variant="subtitle" component="div" gutterBottom>A Katary Production</Typography>
       </footer>
     </>
   )
