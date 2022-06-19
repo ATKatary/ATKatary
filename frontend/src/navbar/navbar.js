@@ -1,26 +1,29 @@
 import './navbar.css';
 import {Button} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { changeVisibility } from '../personal_util/display';
 
 function NavBar(props) {
-  const color = props.color;
+  const sections = ["Resume", "Projects", "Research", "Work", "Contact"]
+  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", marginLeft: "20px", marginTop: "5px", color: "#000", opacity: "50%"}
+  const show = (id) => {
+    for (const section of sections) changeVisibility("hide", section.toLowerCase());
+    // hiding cover
+    const cover = document.getElementById(props.coverId);
+    cover.classList.remove("hide-animation")
+    cover.classList.add("hide-animation")
+    // displaying page
+    setTimeout(() => {}, 10000)
+    const section = document.getElementById(id);
+    section.classList.remove("appear-animation")
+    section.classList.add("appear-animation")
+    changeVisibility("show", id);
+  }
+  
   return (
-    <>
-      <nav>
-        <div className="navCont align-center">
-          <div className="hide-700px">
-            <Button variant="text" id="contact" className="nav-p" sx = {{fontSize : "14px", fontWeight: "900", color: {color}}}>Resume</Button>
-            <Button variant="text" id="contact" className="nav-p" sx = {{fontSize : "14px", fontWeight: "900", color: {color}}}>Contact</Button>
-            <Button variant="text" id="contact" className="nav-p" sx = {{fontSize : "14px", fontWeight: "900", color: {color}}} onClick={() => window.location="#projects"}>Projects</Button>
-            <Button variant="text" id="contact" className="nav-p" sx = {{fontSize : "14px", fontWeight: "900", color: {color}}} onClick={() => window.location="#research"}>Research</Button>
-            <Button variant="text" id="contact" className="nav-p" sx = {{fontSize : "14px", fontWeight: "900", color: {color}}} onClick={() => window.location="#art"}>Art</Button>
-          </div>
-          <MenuIcon sx={{color: props.color}} fontSize="large" className="nav-p show-700px"/>
-          <GitHubIcon sx={{color: {color}}} className="nav-p pointer" fontSize="large" onClick={() => {window.location = "https://github.com/ATKatary"}}/>
-        </div>
-      </nav>
-    </>
+    <div className="width-100">
+      {sections.map(section => <Button key={`${section}Btn`} sx={style} className="text-center darken" onClick={() => {show(section.toLowerCase())}}>{section}</Button>)}
+    </div>
   )
 }
 

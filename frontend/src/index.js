@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Landing from './landing/landing.js';
-import Art from './art/art.js';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
@@ -11,7 +10,6 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/art/" element={<Art />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

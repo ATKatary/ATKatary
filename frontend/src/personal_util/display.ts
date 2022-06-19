@@ -6,17 +6,14 @@
  */
 export function changeVisibility(action: string, id: string): void {
     const element = document.getElementById(id);
-    const expandedElement = document.getElementById(id + "Expanded");
-    if (element === null || expandedElement === null) return;
+    if (element === null) return;
     switch (action) {
       case "show" : {
-        element.style.visibility = "hidden";
-        expandedElement.style.visibility = "visible";
+        element.style.display = "flex";
         break;
       }
       case "hide" : {
-        element.style.visibility = "visible";
-        expandedElement.style.visibility = "hidden";
+        element.style.display = "none";
         break;
       }
       default : break;

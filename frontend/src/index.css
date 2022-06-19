@@ -20,7 +20,7 @@
       monospace;
   }
 
-  html, body, #appRoot {
+  html, body, #appRoot, #root {
     width: -webkit-fill-available;
     -ms-overflow-style: none; 
     scrollbar-width: none;
