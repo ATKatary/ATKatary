@@ -70,8 +70,8 @@ function Landing() {
             {/** Sections **/}
             <Resume />
             <Projects images={images}/>
-            <Research />
-            <Work />
+            <Research images={images}/>
+            <Work images={images}/>
             <Contact />
             {/** Cover **/}
             <div 

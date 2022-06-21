@@ -2,7 +2,8 @@ import { Typography } from '@mui/material';
 import './content.css';
 
 export function Projects(props) {
-  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"}
+  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"};
+  
   return (
     <div style={{color: "black", height: "91%"}} id="projects" className="none column align-center scroll no-scrollbar">
       {/*** Ployem ***/}
