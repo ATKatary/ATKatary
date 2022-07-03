@@ -9,6 +9,8 @@
     .align-center {align-items: center;}
     .justify-center {justify-content: center;}
     .align-self-center {align-self: center;}
+    .no-border {border: none;}
+    .padding-10px {padding: 10px;}
 
     /*** Color Gradients ***/
     .green  {background: linear-gradient(180deg, #39CBB9 0%, #5BFE9E 100%);}
@@ -24,9 +26,12 @@
     /*** Element Styles ***/
 
     /*** Class Styles ***/
-
+    .slide-20 {animation: slide 1s forwards;}
     /*** ID Styles ***/
 
+    @keyframes slide {
+        100% {transform: translate(10vw);}
+    }
 }
 
 /***** > 600px *****/

@@ -46,3 +46,33 @@ export function CoverText(props) {
         </div>
     )
 }   
+
+export function ImageText(props) {
+    const name = props.name
+    const text = props.text
+    const image = props.image
+
+    return (
+        <div className="flex margin-20px align-center">
+            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer"/>
+            <Typography style={props.style}>
+                <b>{name}</b><br></br>{text}
+            </Typography>
+        </div>
+    )
+}
+
+export function TextImage(props) {
+    const name = props.name
+    const text = props.text
+    const image = props.image
+
+    return (
+        <div className="flex margin-20px align-center">
+            <Typography style={props.style}>
+                <b>{name}</b><br></br>{text}
+            </Typography>
+            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer"/>
+        </div>
+    )
+}

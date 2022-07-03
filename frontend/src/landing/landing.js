@@ -72,7 +72,7 @@ function Landing() {
             <Projects images={images}/>
             <Research images={images}/>
             <Work images={images}/>
-            <Contact />
+            <Contact images={images}/>
             {/** Cover **/}
             <div 
               id="cover"
