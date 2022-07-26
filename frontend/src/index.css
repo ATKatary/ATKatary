@@ -24,7 +24,14 @@
     width: -webkit-fill-available;
     -ms-overflow-style: none; 
     scrollbar-width: none;
-    height: 100vh;
+    height: -webkit-fill-available;
+  }
+
+  #appRoot {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: space-between;
   }
 
   ::-webkit-scrollbar {

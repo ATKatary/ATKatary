@@ -18,7 +18,7 @@ export function Projects(props) {
       <ImageText image={props.images("./projects/project0.png")} style={style} name={"Ployem"} text={projects['ployem']}/>
 
       {/*** MIT MSA ***/}
-      <TextImage image={props.images("./projects/project1.png")} style={style} name={"MIT MSA"} text={projects['msa']}/>
+      <TextImage image={props.images("./projects/project1.png")} style={style} name={"MIT MSA"} text={projects['msa']} onClick={() => {window.location = "https://www.mit-msa.com"}}/>
       
       {/*** Star Front ***/}
       <ImageText image={props.images("./projects/project2.png")} style={style} name={"StarFront"} text={projects['starFront']}/>

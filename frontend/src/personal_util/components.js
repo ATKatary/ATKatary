@@ -54,7 +54,7 @@ export function ImageText(props) {
 
     return (
         <div className="flex margin-20px align-center">
-            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer"/>
+            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer" onClick={props.onClick}/>
             <Typography style={props.style}>
                 <b>{name}</b><br></br>{text}
             </Typography>
@@ -72,7 +72,7 @@ export function TextImage(props) {
             <Typography style={props.style}>
                 <b>{name}</b><br></br>{text}
             </Typography>
-            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer"/>
+            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer" onClick={props.onClick}/>
         </div>
     )
 }

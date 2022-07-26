@@ -11,8 +11,8 @@ export function Contact(props) {
   }
 
   return (
-    <div style={{color: "black"}} id="contact" className="flex align-center justify-center width-100 height-100 column">
-      <textarea style={{width: "25vw", height: "15vw", resize: "none", outline: "none", backgroundImage: `url(${props.images("./grayConstruction.png").default})`}} className="box-shadow no-border padding-10px margin-20px"></textarea>
+    <div style={{color: "black"}} id="contact" className="none align-center justify-center width-100 height-100 column">
+      <textarea placeholder="Write your message here ..." style={{width: "25vw", height: "15vw", resize: "none", outline: "none", backgroundImage: `url(${props.images("./grayConstruction.png").default})`}} className="box-shadow no-border padding-10px margin-20px"></textarea>
       <IconButton color="primary" aria-label="send" id="sendBtn">
         <SendIcon className="align-self-start" onClick={sendMessage}/>
       </IconButton>

@@ -27,6 +27,7 @@
     /*** Animations ***/
     @keyframes image-cluster-0 {
         0%, 100% {background-image: url("../media/images/drawings/pic0.png");}
+        50% {background-image: url("../media/images/drawings/pic7.png");}
     }
 
     @keyframes image-cluster-1 {
