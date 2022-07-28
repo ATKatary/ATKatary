@@ -108,7 +108,7 @@ function Landing() {
         </div>
 
         {/** Right Art Gallery **/}
-        <div style={{width: "17%", height: "60vw"}} className="flex column align-center justify-around">
+        <div style={{width: "17%", height: "max(60vw, 600px)"}} className="flex column align-center justify-around">
           <Image i={1} angle="-3deg" height="17%"/>
           <Image i={3} angle="7deg" height="20%"/>
           <Image i={4} angle="2deg" height="15%"/>
