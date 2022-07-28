@@ -45,12 +45,12 @@
   .font-32px {font-size: 32px;}
   .font-26px {font-size: 26px;}
   .font-22px {font-size: 22px;}
-  .font-3vw {font-size: 3vw !important;}
-  .font-3-5vw {font-size: 3.5vw !important;}
-  .font-2vw {font-size: 2vw !important;}
-  .font-2-5vw {font-size: 2.5vw !important;}
-  .font-1vw {font-size: 1vw !important;}
-  .font-1-5vw {font-size: 1.5vw !important;}
+  .font-3vw {font-size: max(3vw, 30px) !important;}
+  .font-3-5vw {font-size: max(3.5vw, 35px) !important;}
+  .font-2vw {font-size: max(2vw, 20px) !important;}
+  .font-2-5vw {font-size: max(2.5vw, 25px) !important;}
+  .font-1vw {font-size: max(1vw, 10px) !important;}
+  .font-1-5vw {font-size: max(1.5vw, 15px) !important;}
 
   /*** Color Gradients ***/
   .red    {background: linear-gradient(225deg, #F78888 0%, #DA6767 88.84%);}
@@ -82,7 +82,7 @@
   }
 
   .image {
-      height: 30vw;
+      height: max(30vw, 300px);
   }
 
   .slideshow > div {

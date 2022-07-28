@@ -30,7 +30,7 @@
     /*** ID Styles ***/
 
     @keyframes slide {
-        100% {transform: translate(10vw);}
+        100% {transform: translate(max(10vw, 100px));}
     }
 }
 

@@ -8,7 +8,7 @@ export function Pin(props) {
     return (
       <div 
       className={`box-shadow circle ${color}-solid box-shadow`} 
-      style={{width: "1vw", height: "1vw", margin: props.margin}}>
+      style={{width: "max(1vw, 10px)", height: "max(1vw, 10px)", margin: props.margin}}>
       </div>
     )
 }
@@ -54,7 +54,7 @@ export function ImageText(props) {
 
     return (
         <div className="flex margin-20px align-center">
-            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer" onClick={props.onClick}/>
+            <img alt="" src={image.default} style={{width: "max(12vw, 120px)"}} className="pointer" onClick={props.onClick}/>
             <Typography style={props.style}>
                 <b>{name}</b><br></br>{text}
             </Typography>
@@ -72,7 +72,7 @@ export function TextImage(props) {
             <Typography style={props.style}>
                 <b>{name}</b><br></br>{text}
             </Typography>
-            <img alt="" src={image.default} style={{width: "12vw"}} className="pointer" onClick={props.onClick}/>
+            <img alt="" src={image.default} style={{width: "max(12vw, 120px)"}} className="pointer" onClick={props.onClick}/>
         </div>
     )
 }

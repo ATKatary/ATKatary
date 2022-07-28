@@ -12,7 +12,7 @@ export function Contact(props) {
 
   return (
     <div style={{color: "black"}} id="contact" className="none align-center justify-center width-100 height-100 column">
-      <textarea placeholder="Write your message here ..." style={{width: "25vw", height: "15vw", resize: "none", outline: "none", backgroundImage: `url(${props.images("./grayConstruction.png").default})`}} className="box-shadow no-border padding-10px margin-20px"></textarea>
+      <textarea placeholder="Write your message here ..." style={{width: "max(25vw, 250px)", height: "max(15vw, 150px)", resize: "none", outline: "none", backgroundImage: `url(${props.images("./grayConstruction.png").default})`}} className="box-shadow no-border padding-10px margin-20px"></textarea>
       <IconButton color="primary" aria-label="send" id="sendBtn">
         <SendIcon className="align-self-start" onClick={sendMessage}/>
       </IconButton>

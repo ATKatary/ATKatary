@@ -3,7 +3,7 @@ import './content.css';
 import {ImageText, TextImage} from '../personal_util/components';
 
 export function Projects(props) {
-  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"};
+  const style = {fontSize: "max(1.5vw, 15px)", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"};
   const projects = {
     'ployem': `A Collection of open source projects that were the result of months of interviews and study of the needs of highschool students from under represented communities`,
     'msa': `A website for the MIT Muslim Student Association to showcase thier information and events`,

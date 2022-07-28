@@ -5,7 +5,7 @@ import { changeVisibility } from '../personal_util/display';
 
 function NavBar(props) {
   const sections = ["Resume", "Projects", "Research", "Work", "Contact"]
-  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", marginLeft: "20px", marginTop: "5px", color: "#000", opacity: "50%"}
+  const style = {fontSize: "max(1.5vw, 15px)", fontFamily: "'Annie Use Your Telescope'", marginLeft: "20px", marginTop: "5px", color: "#000", opacity: "50%"}
   const show = (id) => {
     for (const section of sections) changeVisibility("hide", section.toLowerCase());
     // hiding cover

@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import {ImageText, TextImage} from '../personal_util/components';
 
 export function Work(props) {
-  const style = {fontSize: "1.5vw", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"};
+  const style = {fontSize: "max(1.5vw, 15px)", fontFamily: "'Annie Use Your Telescope'", color: "#000", marginLeft: "30px"};
   const work = {
     'infosys': `Designed and implemented a GAN for security surveillance feed super resolution. This model was then converted from a classical GAN model into a quantum GAN`,
     'road2sucess': `Tutored over 30 students over the summer in SAT Math, Geometry, Calculus, and Chemistry for 15 hours a week for six weeks for 3 years. While I was there some students saw exam scores increase by an average of 100 points over a month`,
